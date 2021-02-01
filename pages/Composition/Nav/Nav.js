@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import {tw} from 'twind'
 import github from '../../img/github.svg'
 import instagram from '../../img/instagram.svg'
@@ -24,7 +24,7 @@ export default function Nav() {
           </div>
         </div>
         <div className={click ? 'navMenu active' : 'navMenu'}>
-          <div className={tw `mt-28 sm:mt-0`}>
+          <div>
             <ul className={tw `flex flex-col sm:flex-row text-lg`}>
               <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 `, styled.coba}>Home</a></li>
               <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Project</a></li>
