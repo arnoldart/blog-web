@@ -1,0 +1,19 @@
+.coba {
+  position: relative;
+}
+
+.coba:hover {
+  color: #FFD369;
+}
+
+.coba::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  right: 0;
+  height: 0.125rem;
+  background-color: red;
+  transform: scale(0);
+  transition: transform ease-out .2s;
+}
