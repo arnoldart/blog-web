@@ -16,7 +16,7 @@ export default function Nav() {
     <>
       <nav className={tw `mx-auto mt-8 container flex flex-col sm:flex-row items-center justify-between text-white text-center`}>
         <div className={styled.logo}>
-          <div className={tw `ml-5`}>
+          <div className={tw `ml-7`}>
             <h1 className={tw `text-2xl font-semibold`}>Arnold</h1>
           </div>
           <div className={styled.menuIcon} onClick={handleClick}>
