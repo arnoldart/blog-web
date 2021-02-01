@@ -14,7 +14,7 @@ export default function Nav() {
 
   return(
     <>
-      <nav className={tw `mx-auto mt-8 container flex flex-col sm:flex-row items-center justify-between text-white text-center`}>
+      <nav className={tw `mx-auto mt-6 container flex flex-col sm:flex-row items-center justify-between text-white text-center`}>
         <div className={styled.logo}>
           <div className={tw `ml-7`}>
             <h1 className={tw `text-2xl font-semibold`}>Arnold</h1>
@@ -24,7 +24,7 @@ export default function Nav() {
           </div>
         </div>
         <div className={click ? 'navMenu active' : 'navMenu'}>
-          <div className={tw `mt-14 sm:mt-0`}>
+          <div className={tw `mt-16 sm:mt-0`}>
             <ul className={tw `flex flex-col sm:flex-row text-lg`}>
               <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 `, styled.coba}>Home</a></li>
               <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Project</a></li>
