@@ -17,3 +17,26 @@
   transform: scale(0);
   transition: transform ease-out .2s;
 }
+
+.menuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  
+  .menuIcon {
+    margin-right: 1.5rem;
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+}
