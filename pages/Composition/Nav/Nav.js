@@ -26,13 +26,13 @@ export default function Nav() {
         <div className={click ? 'navMenu active' : 'navMenu'}>
           <div className={tw `mt-28 sm:mt-0`}>
             <ul className={tw `flex flex-col sm:flex-row text-lg`}>
-              <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 `, styled.coba}>Home</a></li>
-              <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Project</a></li>
-              <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Blog</a></li>
-              <li className={tw `mt-5 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>About</a></li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 `, styled.coba}>Home</a></li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Project</a></li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Blog</a></li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>About</a></li>
             </ul>
           </div>
-          <div className={tw `flex items-center mt-5 sm:mt-0`}>
+          <div className={tw `flex items-center mt-8 sm:mt-0`}>
             <img className={tw `ml-0 sm:ml-10`} src={instagram} alt="instagram"/>
             <img className={tw `ml-6 sm:ml-10 mr-6 sm:mr-0 w-8 h-8`} src={github} alt="github"/>
             <img className={tw `ml-0 sm:ml-10`} src={message} alt="message"/>
