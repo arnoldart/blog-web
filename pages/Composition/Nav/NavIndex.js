@@ -1,12 +1,13 @@
-import React,{useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import {tw} from 'twind'
 import github from '../../img/github.svg'
 import instagram from '../../img/instagram.svg'
 import message from '../../img/message.svg'
 import styled from './Nav.module.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import Link from 'next/link'
 
-export default function Nav() {
+export default function NavIndex() {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
@@ -14,9 +15,9 @@ export default function Nav() {
 
   return(
     <>
-      <nav className={tw `mx-auto mt-6 container flex flex-col sm:flex-row items-center justify-between text-white text-center`}>
+      <nav className={tw `flex container mx-auto mt-6 flex-col sm:flex-row items-center justify-between text-white text-center`}>
         <div className={styled.logo}>
-          <div className={tw `ml-7`}>
+          <div className={tw `ml-7 sm:ml-0`}>
             <h1 className={tw `text-2xl font-semibold`}>Arnold</h1>
           </div>
           <div className={styled.menuIcon} onClick={handleClick}>
@@ -26,10 +27,18 @@ export default function Nav() {
         <div className={click ? 'navMenu active' : 'navMenu'}>
           <div className={styled.navContainer}>
             <ul className={tw `flex flex-col sm:flex-row text-xl sm:text-lg`}>
-              <li><a href="" className={tw `ml-0 sm:ml-10 `, styled.coba}>Home</a></li>
-              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Project</a></li>
-              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>Blog</a></li>
-              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-400`}>About</a></li>
+              <li className={tw `mt-8 sm:mt-0`}>
+                <Link href="/">
+                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>Home</a>
+                </Link>
+              </li>
+              <li className={tw `mt-8 sm:mt-0`}>
+                <Link href="../../project">
+                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
+                </Link>
+              </li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a></li>
+              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>About</a></li>
             </ul>
           </div>
           <div className={tw `flex items-center mt-8 sm:mt-0`}>

@@ -14,7 +14,7 @@ body {
 .navMenu {
   display: flex;
   align-items: center;
-  width: 61%;
+  width: 66%;
   justify-content: space-between;
 }
 
@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     position: fixed;
     left: -100%;
     top: 0;
