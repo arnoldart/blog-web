@@ -9,7 +9,7 @@ export default function CardProject({img, alt, title, desc, date}) {
         </div>
         <div className={tw `text-white p-4 `}>
           <h3>Judul</h3>
-          <p className={tw `my-5`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sunt. Placeat odio nemo repellendus.</p>
+          <p className={tw `my-5`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sunt. Placeat odio nemo repellendus inventore.</p>
           <p>2-feb-2021</p>
         </div>
       </div>
