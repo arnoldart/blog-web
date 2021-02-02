@@ -69,6 +69,10 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
   }
 
+  .heading {
+    margin-top: 2rem;
+  }
+
   /* .nav */
 
 }
