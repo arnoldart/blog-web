@@ -12,11 +12,11 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(transparent, #FB2F2F);
+  background: #FFD369;
   border-radius: 6px;
 }
 
