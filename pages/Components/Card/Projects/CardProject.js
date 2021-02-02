@@ -8,9 +8,9 @@ export default function CardProject({img, alt, title, desc, date}) {
           <img className={tw `rounded-t-2xl`} src={img} alt={alt}/>
         </div>
         <div className={tw `text-white p-4 `}>
-          <h3>Judul</h3>
-          <p className={tw `my-5`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sunt. Placeat odio nemo repellendus inventore.</p>
-          <p>2-feb-2021</p>
+          <h3>{title}</h3>
+          <p className={tw `my-5`}>{desc}</p>
+          <p>{date}</p>
         </div>
       </div>
     </>

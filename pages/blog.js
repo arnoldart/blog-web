@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Nav from './Composition/Nav/NavBlog'
+import Nav from './Components/Nav/NavBlog'
 import {tw} from 'twind'
 
 export default function Blog() {

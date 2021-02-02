@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Nav from './Composition/Nav/NavProject'
+import Nav from './Components/Nav/NavProject'
 import {css, apply, theme, tw} from 'twind/css'
-import DataProjects from './Composition/Card/Projects/Data/DataProject'
+import DataProjects from './Components/Card/Projects/Data/DataProject'
 
 export default function project() {
 
