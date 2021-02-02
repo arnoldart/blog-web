@@ -37,8 +37,16 @@ export default function NavIndex() {
                   <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
                 </Link>
               </li>
-              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a></li>
-              <li className={tw `mt-8 sm:mt-0`}><a href="" className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>About</a></li>
+              <li className={tw `mt-8 sm:mt-0`}>
+                <Link href="../../blog">
+                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a>
+                </Link>
+              </li>
+              <li className={tw `mt-8 sm:mt-0`}>
+                <Link href="../../about">
+                <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>About</a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={tw `flex items-center mt-8 sm:mt-0`}>

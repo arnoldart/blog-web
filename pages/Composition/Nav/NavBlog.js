@@ -34,12 +34,12 @@ export default function NavIndex() {
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
                 <Link href="../../project">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>Project</a>
+                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
                 <Link href="../../blog">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a>
+                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>Blog</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
