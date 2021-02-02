@@ -29,22 +29,22 @@ export default function NavIndex() {
             <ul className={tw `flex flex-col sm:flex-row text-xl sm:text-lg`}>
               <li className={tw `mt-8 sm:mt-0`}>
                 <Link href="/">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Home</a>
+                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Home</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="../../project">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
+                <Link href="/project">
+                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="../../blog">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a>
+                <Link href="/blog">
+                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="../../about">
-                  <a className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>About</a>
+                <Link href="/about">
+                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>About</a>
                 </Link>
               </li>
             </ul>
