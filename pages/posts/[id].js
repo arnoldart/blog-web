@@ -1,4 +1,5 @@
 import { getAllPostIds, getPostData } from '../../lib/posts'
+// import { getAllPostIds, getPostData } from '../../lib/project'
 import Date from '../../components/Date'
 import Head from 'next/head'
 

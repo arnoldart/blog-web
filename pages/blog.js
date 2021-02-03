@@ -33,18 +33,16 @@ export default function project({allPostsData}) {
         </div>
 
         <div className={tw `flex mt-20 flex-col sm:flex-row justify-evenly items-center`}>
-        {allPostsData.map(({ id, date, title }) => (
-          <div key={id} className={tw `w-80 my-10 sm:my-0 bg-gray-500 rounded-2xl mt-0 transition-all duration-500 sm:hover:-mt-10 hover:shadow-md`}>
-            <a href={`/posts/${id}`}>
-              <div>
-                <img className={tw `rounded-t-2xl`} src="" alt=""/>
-              </div>
-              <div className={tw `text-white p-4 `}>
-                <h3>{title}</h3>
-                <p>{date}</p>
-              </div>
-            </a>
-          </div>
+        {allPostsData.map(({ id, date, image, title }) => (
+          <a key={id}  href={`/posts/${id}`} className={tw `w-80 h-96 my-10 sm:my-0 bg-gray-500 rounded-2xl mt-0 transition-all duration-500 sm:hover:-mt-10 hover:shadow-md`}>
+            <div>
+              <img className={tw `rounded-t-2xl`} src={image} alt=""/>
+            </div>
+            <div className={tw `text-white p-4 `}>
+              <h3>{title}</h3>
+              <p>{date}</p>
+            </div>
+          </a>
         ))}
         </div>
       
