@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Nav from './Components/Nav/NavBlog'
+import Nav from './Components/Nav/Nav'
 import {css, apply, theme, tw} from 'twind/css'
 import DataProjects from './Components/Card/Projects/Data/DataProject'
 import { getSortedPostsData } from '../lib/posts'

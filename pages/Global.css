@@ -36,6 +36,10 @@ body::-webkit-scrollbar-thumb {
   margin-top: 3rem;
 }
 
+.active {
+  color: black;
+}
+
 /* .heading::after {
   content: '';
   display: block;

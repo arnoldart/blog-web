@@ -5,9 +5,9 @@ import instagram from '../../img/instagram.svg'
 import message from '../../img/message.svg'
 import styled from './Nav.module.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import Link from 'next/link'
+import Link from '../../ActiveLink'
 
-export default function NavIndex() {
+export default function Nav() {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
@@ -28,23 +28,23 @@ export default function NavIndex() {
           <div className={styled.navContainer}>
             <ul className={tw `flex flex-col sm:flex-row text-xl sm:text-lg`}>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="/">
+                <Link activeClassName={tw `text-yellow-300`} href="/">
                   <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Home</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="/project">
+                <Link activeClassName={tw `text-yellow-300`} href="/project">
                   <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Project</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="/blog">
-                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in text-yellow-300`}>Blog</a>
+                <Link activeClassName={tw `text-yellow-300`} href="/blog">
+                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>Blog</a>
                 </Link>
               </li>
               <li className={tw `mt-8 sm:mt-0`}>
-                <Link href="/about">
-                  <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>About</a>
+                <Link activeClassName={tw `text-yellow-300`} href="/about">
+                <a onClick={closeMobileMenu} className={tw `ml-0 sm:ml-10 transition duration-150 ease-in hover:text-yellow-300`}>About</a>
                 </Link>
               </li>
             </ul>
