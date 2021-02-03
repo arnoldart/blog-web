@@ -5,7 +5,7 @@ import instagram from '../../img/instagram.svg'
 import message from '../../img/message.svg'
 import styled from './Nav.module.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import Link from '../../ActiveLink'
+import Link from '../../../components/ActiveLink'
 
 export default function Nav() {
   const [click, setClick] = useState(false)
