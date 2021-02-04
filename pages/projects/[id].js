@@ -23,21 +23,21 @@ export default function Post({postData}) {
         <div className={tw `text-center font-bold`}>
           <p className={tw `text-3xl`}>{postData.title}</p>
         </div>
-        <div className={tw `flex`}>
-          <div className={tw `w-4/5 flex-initial rounded-lg`}>
-            <img className={tw `w-4/5 border-2 border-yellow-300 rounded-lg`} src={postData.image} alt="img"/>
+        <div className={tw `flex flex-col sm:flex-row mt-10`}>
+          <div className={tw `w-full rounded-lg`}>
+            <img className={tw `w-auto sm:w-4/5 border-2 border-yellow-300 rounded-lg`} src={postData.image} alt="img"/>
           </div>
-          <div className={tw `w-80 p-4 border-2 border-yellow-300 rounded-lg`}>
+          <div className={tw `w-full sm:w-80 p-4 border-2 border-yellow-300 rounded-lg mt-10 sm:mt-0`}>
             <p className={tw `text-center font-bold`}>Tools</p>
-            <div>
-              <p>Next</p>
-              <p>Next</p>
-              <p>Next</p>
-              <p>Next</p>
+            <div className={tw `flex flex-col mt-4`}>
+              <p className={tw `py-4 border-b-2 border-t-2 border-gray-500`}>Next</p>
+              <p className={tw `py-4 border-b-2 border-gray-500`}>Next</p>
+              <p className={tw `py-4 border-b-2 border-gray-500`}>Next</p>
+              <p className={tw `py-4 border-b-2 border-gray-500`}>Next</p>
             </div>
           </div>
         </div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div className={tw `mt-10`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
 
     </Layout>
