@@ -43,14 +43,10 @@ export default function Post({postData}) {
       <main className={tw `text-white mx-10 sm:mx-20`}>
         {title}
         <div className={tw `flex flex-col sm:flex-row mt-10`}>
-          <div className={tw `w-full rounded-lg`}>
-            <Link target="_blank" href={postData.view}>
-              <a target="_blank">
-                <img className={tw `w-auto sm:w-4/5 border-2 border-yellow-300 rounded-lg`} src={postData.image} alt="img"/>
-              </a>
-            </Link>
+          <div className={tw `w-full rounded-lg flex-1`}>
+            <img className={tw `w-auto sm:w-4/5 border-2 border-yellow-300 rounded-lg`} src={postData.image} alt="img"/>
           </div>
-          <div className={tw `mt-10 sm:mt-0 ${styled.card}`}>
+          <div className={tw `mt-10 sm:mt-0`}>
             <div className={tw `w-full sm:w-80 border-2 border-yellow-300 rounded-lg relative`}>
               <div className={tw `p-4`}>
                 <p className={tw `text-center font-bold`}>Tools</p>

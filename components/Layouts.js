@@ -1,10 +1,13 @@
-import Nav from '../pages/Components/Nav/Nav'
+import Nav from '../pages/Components/Nav/NavBlog'
+import {tw} from 'twind'
 
 export default function Layout({children}) {
   return (
     <>
       <Nav />
-      {children}
+      <main className={tw `mt-10`}>
+        {children}
+      </main>
     </>
   )
 }

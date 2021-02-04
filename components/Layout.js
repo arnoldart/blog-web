@@ -1,4 +1,4 @@
-import Nav from '../pages/Components/Nav/Nav'
+import Nav from '../pages/Components/Nav/NavPro'
 import {tw} from 'twind'
 
 export default function Layout({children}) {

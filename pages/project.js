@@ -18,6 +18,7 @@ export async function getStaticProps() {
 }
 
 export default function Blog({allPostsData}) {
+
   return (
     <>
       <Head>
