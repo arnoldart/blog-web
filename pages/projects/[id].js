@@ -50,8 +50,8 @@ export default function Post({postData}) {
               </a>
             </Link>
           </div>
-          <div className={tw `mt-10 sm:mt-0`}>
-            <div className={tw `border-2 border-yellow-300 rounded-lg relative`}>
+          <div className={tw `mt-10 sm:mt-0 ${styled.card}`}>
+            <div className={tw `w-full sm:w-80 border-2 border-yellow-300 rounded-lg relative`}>
               <div className={tw `p-4`}>
                 <p className={tw `text-center font-bold`}>Tools</p>
                 <div className={tw `flex flex-col mt-4 border-t-2 border-gray-500`}>
@@ -60,16 +60,16 @@ export default function Post({postData}) {
               </div>
               <div className={tw `flex bottom-0`}>
                 <Link target="_blank" href={postData.view}>
-                  <a target="_blank">
-                    <div className={tw `flex bg-red-500 justify-center p-3 rounded-bl-lg ${styled.views}`}>
+                  <a target="_blank" className={tw `w-full`}>
+                    <div className={tw `flex bg-red-500 justify-center p-3 rounded-bl-lg`}>
                       <img className={tw `mr-4`} src={views} alt="img"/>
                         view
                     </div>
                   </a>
                 </Link>
                 <Link target="_blank" href={postData.srcode}>
-                  <a target="_blank">
-                    <div className={tw `flex bg-blue-500 justify-center p-3 rounded-br-lg ${styled.views}`}>
+                  <a target="_blank" className={tw `w-full`}>
+                    <div className={tw `flex bg-blue-500 justify-center p-3 rounded-br-lg`}>
                       <img className={tw `mr-4`} src={github} alt="img"/>
                       source
                     </div>
