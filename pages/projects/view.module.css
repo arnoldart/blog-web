@@ -1,0 +1,11 @@
+.views {
+  width: 7.77rem
+}
+
+@media screen and (max-width: 640px) {
+
+  .views {
+    width: 10.1rem
+  }
+
+}
