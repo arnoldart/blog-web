@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <img src="" alt=""/>
           </div>
-          <h1>Powered by <span className={tw `text-yellow-300 font-bold`}>Vercel</span> <br className={tw `block sm:hidden`}/> Copyright &copy; 2021 <span className={tw `text-yellow-300 font-bold`}>Arnold</span> </h1>
+          <h1>Powered by <span className={tw `text-yellow-300 font-bold`}>Vercel</span> Copyright &copy; 2021 <span className={tw `text-yellow-300 font-bold`}>Arnold</span> </h1>
         </div>
       </div>
     </>
