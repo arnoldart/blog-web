@@ -50,9 +50,21 @@ export default function Nav() {
             </ul>
           </div>
           <div className={tw `flex items-center mt-8 sm:mt-0`}>
-            <img className={tw `ml-0 sm:ml-10`} src={instagram} alt="instagram"/>
-            <img className={tw `ml-6 sm:ml-10 mr-6 sm:mr-0 w-8 h-8`} src={github} alt="github"/>
-            <img className={tw `ml-0 sm:ml-10`} src={message} alt="message"/>
+            <Link target="_blank" href="https://www.instagram.com/jedidta_adoni/">
+              <a target="_blank">
+                <img className={tw `ml-0 sm:ml-10`} src={instagram} alt="instagram"/>
+              </a>
+            </Link>
+            <Link target="_blank" href="https://github.com/arnoldart">
+              <a target="_blank">
+                <img className={tw `ml-6 sm:ml-10 mr-6 sm:mr-0 w-8 h-8`} src={github} alt="github"/>
+              </a>
+            </Link>
+            <Link target="_blank" href="https://mail.google.com/mail/u/0/#inbox">
+              <a target="_blank">
+                <img className={tw `ml-0 sm:ml-10`} src={message} alt="message"/>
+              </a>
+            </Link>
           </div>
         </div>
       </nav>
