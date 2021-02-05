@@ -1,4 +1,4 @@
-import profile from '../public/images/profil.svg'
+import profile from '../public/images/profil.png'
 import {tw} from 'twind'
 
 export default function Profile() {
