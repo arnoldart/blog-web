@@ -11,9 +11,15 @@ export default function About() {
         <title>About | Arnold Blog</title>
       </Head>
 
-      <main className={tw ``}>
-        <Nav />
-        <div className={tw `static`}>
+      <Nav />
+
+      <main className={tw `flex flex-col min-h-screen`}>
+        
+        <div className={tw `flex-1`}>
+
+        </div>
+
+        <div className={tw `mt-10`}>
           <Footer />
         </div>
       </main>
