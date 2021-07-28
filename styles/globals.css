@@ -12,6 +12,11 @@ body {
   background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 }
 
+.container {
+  width: 88%;
+  margin: auto;
+}
+
 @media screen and (max-width: 640px) {
   .navMenu {
     display: flex;

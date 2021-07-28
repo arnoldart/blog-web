@@ -18,14 +18,16 @@ export default function Home() {
 
       <main className={tw `flex flex-col min-h-screen`}>
         <div className={tw `flex-1`}>
-          <div className={tw `mx-6 xl:mx-32 bg-gray-700 rounded-lg mt-7`}>
-            <div className={tw `flex flex-col lg:flex-row items-center p-6`}>
-              <div>
-                <Image src={ProfilePc} alt="test" width="512" height="512"/>
-              </div>
-              <div className={tw `text-white text-center lg:text-left mt-10 lg:ml-8 lg:mt-0`}>
-                <p className={tw `font-bold text-3xl lg:text-3xl`}>Halo semua perkenalkan saya Arnold</p>
-                <p className={tw `mt-3 text-lg text-gray-200`}>Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.</p>
+          <div className='container'>
+            <div className={tw `bg-gray-700 rounded-lg mt-7 mx-6`}>
+              <div className={tw `flex flex-col lg:flex-row items-center p-6`}>
+                <div>
+                  <Image src={ProfilePc} alt="test" width="512" height="512"/>
+                </div>
+                <div className={tw `text-white text-center lg:text-left mt-10 lg:ml-8 lg:mt-0`}>
+                  <p className={tw `font-bold text-3xl lg:text-3xl`}>Halo semua perkenalkan saya Arnold</p>
+                  <p className={tw `mt-3 text-lg text-gray-200`}>Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.</p>
+                </div>
               </div>
             </div>
           </div>

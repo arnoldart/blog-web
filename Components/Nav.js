@@ -10,9 +10,9 @@ export default function Nav() {
 
   return (
     <>
-      <div className={tw `sm:container sm:mx-auto md:container md:mx-auto lg:container lg:mx-auto xl:container xl:mx-auto`}>
-        <nav className={tw `flex sm:flex-row flex-col justify-between text-white items-center xl:px-0 md:px-10`}>
-          <div className={tw `flex items-center justify-between text-white px-6 sm:px-0 my-3 w-full sm:w-auto z-10`}>
+      <nav className="container">
+        <div className={tw `flex sm:flex-row flex-col justify-between text-white items-center px-6`}>
+          <div className={tw `flex items-center justify-between text-white my-3 w-full sm:w-auto z-10`}>
             <p className={tw `text-2xl font-semibold`}>Arnold</p>
             <div onClick={handleClick} className={tw `block text-xl sm:hidden`}>
               {click ? <FaTimes/> : <FaBars/>}
@@ -44,8 +44,8 @@ export default function Nav() {
               </ul>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </>
   )
 }
