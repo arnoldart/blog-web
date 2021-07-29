@@ -4,8 +4,9 @@ import Nav from '../Components/Nav'
 import { tw } from 'twind'
 import Footer from '../Components/Footer'
 import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
     props: {
@@ -18,6 +19,7 @@ export default function Project({allPostsData}) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Project | Arnold Blog</title>
       </Head>
 
@@ -27,17 +29,17 @@ export default function Project({allPostsData}) {
         <div className={tw `flex-1`}>
           <div className="container">
             <div className={tw `mx-6 text-white`}>
-              <ul className={tw ``}>
+              <ul>
               {allPostsData.map(({ id, date, title }) => (
-                <a href="" key={id}>
-                  <li>
+                <Link href={`/posts/${id}`} key={id}>
+                  <li className={tw `cursor-pointer`}>
                     {title}
                     <br />
                     {id}
                     <br />
                     {date}
                   </li>
-                </a>
+                </Link>
               ))}
               </ul>
             </div>
