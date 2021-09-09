@@ -30,7 +30,7 @@ export default function Project({allPostsData}) {
             <div className={tw `mx-6 text-white`}>
               <ul>
               {allPostsData.map(({ id, date, title }) => (
-                <Link href={`/posts/project/${id}`} key={id}>
+                <a href={`/posts/project/${id}`} key={id}>
                   <li className={tw `cursor-pointer`}>
                     {title}
                     <br />
@@ -38,7 +38,7 @@ export default function Project({allPostsData}) {
                     <br />
                     {date}
                   </li>
-                </Link>
+                </a>
               ))}
               </ul>
             </div>

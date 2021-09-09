@@ -30,14 +30,14 @@ export default function Blog({ allPostsData }) {
             <div className={tw `mx-6 text-white`}>
               <ul className={tw `flex justify-center items-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
                 {allPostsData.map(({ id, date, title }) => (
-                  <Link href={`/posts/blog/${id}`} key={id}>
+                  <a href={`/posts/blog/${id}`} key={id}>
                   <div className={tw `border border-white w-72 my-2 p-5 rounded-md`}>
                     <li className={tw `cursor-pointer`}>
                       <p className={tw `text-xs text-gray-400`}>{date}</p>
                       <p className={tw `mt-1`}>{title}</p>
                     </li>
                   </div>
-                </Link>
+                </a>
                 ))}
               </ul>
             </div>
