@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Nav from '../Components/Nav'
 import { tw } from 'twind'
 import Footer from '../Components/Footer'
@@ -29,15 +28,15 @@ export default function Blog({ allPostsData }) {
         <div className={tw `flex-1`}>
           <div className={tw `container`}>
             <div className={tw `mx-6 text-white`}>
-              <ul className={tw `flex justify-evenly flex-col lg:flex-row`}>
+              <ul className={tw `flex justify-center items-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
                 {allPostsData.map(({ id, date, title }) => (
                   <Link href={`/posts/blog/${id}`} key={id}>
-                 <div className={tw `border border-white w-72`}>
-                  <li className={tw `cursor-pointer`}>
-                    <p>{title}</p>
-                    <p>{date}</p>
-                  </li>
-                 </div>
+                  <div className={tw `border border-white w-72 my-2 p-5 rounded-md`}>
+                    <li className={tw `cursor-pointer`}>
+                      <p className={tw `text-xs text-gray-400`}>{date}</p>
+                      <p className={tw `mt-1`}>{title}</p>
+                    </li>
+                  </div>
                 </Link>
                 ))}
               </ul>
