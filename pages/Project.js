@@ -5,14 +5,14 @@ import Footer from '../Components/Footer'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData()
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
 
 export default function Project({allPostsData}) {
   return (
@@ -29,7 +29,7 @@ export default function Project({allPostsData}) {
           <div className="container">
             <div className={tw `mx-6 text-white`}>
               <ul>
-              {/* {allPostsData.map(({ id, date, title }) => (
+              {allPostsData.map(({ id, date, title }) => (
                 <a href={`/posts/project/${id}`} key={id}>
                   <li className={tw `cursor-pointer`}>
                     {title}
@@ -39,7 +39,7 @@ export default function Project({allPostsData}) {
                     {date}
                   </li>
                 </a>
-              ))} */}
+              ))}
               </ul>
             </div>
           </div>
