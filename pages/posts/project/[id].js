@@ -1,7 +1,7 @@
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Nav from '../../Components/Nav'
+import { getAllPostIds, getPostData } from "../../../lib/posts";
+import Nav from '../../../Components/Nav'
 import Head from 'next/head'
-import Footer from "../../Components/Footer";
+import Footer from "../../../Components/Footer";
 import { tw } from "twind";
 
 export default function Post({postData}) {
