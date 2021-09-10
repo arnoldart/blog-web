@@ -3,6 +3,7 @@ import Nav from '../Components/Nav'
 import { tw } from 'twind'
 import Footer from '../Components/Footer'
 import { getSortedPostsData } from '../lib/blog'
+import { MdDateRange } from 'react-icons/md'
 import Link from 'next/link'
 
 export async function getStaticProps() {
@@ -27,14 +28,23 @@ export default function Blog({ allPostsData }) {
         
         <div className={tw `flex-1`}>
           <div className={tw `container`}>
-            <div className={tw `mx-6 text-white`}>
-              <ul className={tw `flex justify-center items-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
-                {allPostsData.map(({ id, date, title }) => (
+            <div className={tw `flex flex-col items-center mt-10`}>
+              <p className={tw `text-center text-3xl text-white font-semibold `}>All Post</p>
+              <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>
+            </div>
+            <div className={tw `mx-6 mt-10 text-white`}>
+              <ul className={tw `flex justify-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
+                {allPostsData.map(({ id, date, title, description }) => (
                   <a href={`/posts/blog/${id}`} key={id}>
-                  <div className={tw `border border-white w-72 my-2 p-5 rounded-md`}>
+                  <div className={tw `border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300`}>
                     <li className={tw `cursor-pointer`}>
-                      <p className={tw `text-xs text-gray-400`}>{date}</p>
-                      <p className={tw `mt-1`}>{title}</p>
+                      <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
+                      <div className={tw `flex items-center`}>
+                        <MdDateRange className={tw `text-gray-400`} />
+                        <p className={tw `text-xs ml-1 mt-1 text-gray-400`}>{date}</p>
+                      </div>
+                      <div className={tw `border-t border-gray-500 my-3`}></div>
+                      <p className={tw `text-gray-400`}>{description}</p>
                     </li>
                   </div>
                 </a>

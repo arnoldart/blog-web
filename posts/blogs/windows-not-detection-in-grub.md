@@ -1,6 +1,7 @@
 ---
-title: 'Repair Windows Not Detection in Grub'
+title: 'How to Add/Repair Windows Not Detection in Grub'
 date: '2020-09-09'
+description: 'A tutoral add/repair windows not detection in grub.'
 ---
 
 First you copy the command line 

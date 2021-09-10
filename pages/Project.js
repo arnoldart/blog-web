@@ -28,7 +28,7 @@ export default function Project({allPostsData}) {
         <div className={tw `flex-1`}>
           <div className="container">
             <div className={tw `mx-6 text-white`}>
-              <ul>
+              {/* <ul>
               {allPostsData.map(({ id, date, title }) => (
                 <a href={`/posts/project/${id}`} key={id}>
                   <li className={tw `cursor-pointer`}>
@@ -40,7 +40,7 @@ export default function Project({allPostsData}) {
                   </li>
                 </a>
               ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
