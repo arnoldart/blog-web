@@ -8,6 +8,7 @@ export default function About() {
     <>
       <Head>
         <title>About | Arnold Blog</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <Nav />
