@@ -5,7 +5,6 @@ import Footer from "../../../Components/Footer";
 import { tw } from "twind";
 
 export default function Post({postData}) {
-  console.log(postData)
   return (
     <>
       <Head>
@@ -19,7 +18,7 @@ export default function Post({postData}) {
           <div className='container'>
             <div className={tw `mx-6 mt-10`}>
               <p className={tw `text-center text-3xl font-semibold`}>{postData.title}</p>
-              <div className={tw `mt-10`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+              <div className={tw `mt-10 test test-red`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </div>
           </div>
         </div>
