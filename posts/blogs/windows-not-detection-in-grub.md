@@ -35,14 +35,3 @@ if so, you type <br/><br/>
 <br/>
 
 good luck
-
-<style>
-  .CodeBox{
-    background-color:  rgba(55, 65, 81, 1);
-    border-radius: .5rem;
-    padding: .5rem 0 .5rem 1rem;
-  }
-  .CodeText {
-    color:  rgba(209, 213, 219, 1);
-  }
-</style>
