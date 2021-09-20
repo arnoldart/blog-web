@@ -19,8 +19,9 @@ export default function Blog({ allPostsData }) {
   return (
     <>
       <Head>
-        <title>Blog | Arnold Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="blog page"/>
+        <title>Blog | Arnold Blog</title>
       </Head>
 
       <Nav />
@@ -36,9 +37,8 @@ export default function Blog({ allPostsData }) {
             <div className={tw `mx-6 mt-10 text-white`}>
               <ul className={tw `flex justify-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
                 {allPostsData.map(({ id, date, title, description }) => (
-                  <a href={`/posts/blog/${id}`} key={id}>
-                  <div className={tw `border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300`}>
-                    <li className={tw `cursor-pointer`}>
+                  <li className={tw `cursor-pointer border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300`} key={id}>
+                    <a href={`/posts/blog/${id}`}>
                       <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
                       <div className={tw `flex items-center`}>
                         <MdDateRange className={tw `text-gray-400`} />
@@ -46,9 +46,8 @@ export default function Blog({ allPostsData }) {
                       </div>
                       <div className={tw `border-t border-gray-500 my-3`}></div>
                       <p className={tw `text-gray-400`}>{description}</p>
-                    </li>
-                  </div>
-                </a>
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>

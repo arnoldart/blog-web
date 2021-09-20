@@ -22,8 +22,9 @@ export default function Home({ recentPostBlog }) {
   return (
     <>
       <Head>
-        <title>Home | Arnold Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="home page"/>
+        <title>Home | Arnold Blog</title>
       </Head>
 
       <Nav />

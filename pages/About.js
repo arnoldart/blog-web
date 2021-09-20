@@ -7,8 +7,9 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | Arnold Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="about page"/>
+        <title>About | Arnold Blog</title>
       </Head>
 
       <Nav />

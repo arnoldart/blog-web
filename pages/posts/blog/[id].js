@@ -8,6 +8,8 @@ export default function Post({postData}) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="blog content"/>
         <title>Project | {postData.title}</title>
       </Head>
 

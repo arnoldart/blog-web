@@ -18,8 +18,9 @@ export default function Project({allPostsData}) {
   return (
     <>
       <Head>
-        <title>Project | Arnold Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="project page"/>
+        <title>Project | Arnold Blog</title>
       </Head>
 
       <Nav />
