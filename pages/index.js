@@ -47,24 +47,29 @@ export default function Home({ recentPostBlog }) {
               <p className={tw `text-center text-3xl text-white font-semibold `}>Recent Posts</p>
               <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>
             </div>
-            <div className={tw `mx-6 mt-10 text-white`}>
-              <ul className={tw `flex justify-center flex-col lg:flex-row lg:justify-evenly lg:items-stretch`}>
-                {recentPostBlog.map(({ id, date, title, description }) => (
-                  <a href={`/posts/blog/${id}`} key={id}>
-                  <div className={tw `border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300`}>
-                    <li className={tw `cursor-pointer`}>
-                      <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
-                      <div className={tw `flex items-center`}>
-                        <MdDateRange className={tw `text-gray-400`} />
-                        <p className={tw `text-xs ml-1 mt-1 text-gray-400`}>{date}</p>
-                      </div>
-                      <div className={tw `border-t border-gray-500 my-3`}></div>
-                      <p className={tw `text-gray-400`}>{description}</p>
-                    </li>
-                  </div>
-                </a>
-                ))}
-              </ul>
+            <div className={tw `flex justify-center items-center`}>
+              <div className={tw `mx-6 mt-10 text-white`} style={{width: '64.1%'}}>
+                <ul className={tw `flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch`}>
+                  {recentPostBlog.map(({ id, date, title, description }, index) => {
+                    if(index >= 0) {
+                      return (
+                        <li className={tw `cursor-pointer border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300 mx-5`} key={id}>
+                          <a href={`/posts/blog/${id}`}>
+                            <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
+                            <div className={tw `flex items-center`}>
+                              <MdDateRange className={tw `text-gray-400`} />
+                              <p className={tw `text-xs ml-1 mt-1 text-gray-400`}>{date}</p>
+                            </div>
+                            <div className={tw `border-t border-gray-500 my-3`}></div>
+                            <p className={tw `text-gray-400`}>{description}</p>
+                          </a>
+                        </li>
+                      )
+                    }
+                  }
+                  )}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -72,8 +77,6 @@ export default function Home({ recentPostBlog }) {
           <Footer />
         </footer>
       </main>
-
-
     </>
   )
 }
