@@ -1,6 +1,6 @@
 ---
 title: 'How to Add/Repair Windows Not Detection in Grub'
-date: '2020-09-09'
+date: '2021-09-16'
 description: 'A tutoral add/repair windows not detection in grub.'
 ---
 
