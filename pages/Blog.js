@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Nav from '../Components/Nav'
-import { tw } from 'twind'
+import { tw, setup } from 'twind'
 import Footer from '../Components/Footer'
 import { getSortedPostsData } from '../lib/blog'
 import { MdDateRange } from 'react-icons/md'
@@ -14,6 +14,17 @@ export async function getStaticProps() {
     }
   }
 }
+
+setup({
+  theme: {
+    extend: {
+      spacing: {
+        120: "64.1%",
+        65: "17rem"
+    }
+    }
+  }
+})
 
 export default function Blog({ allPostsData }) {
   return (
@@ -35,7 +46,7 @@ export default function Blog({ allPostsData }) {
               <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>
             </div>
             <div className={tw `flex justify-center items-center`}>
-              <div className={tw `mx-6 mt-10 text-white`} style={{width: '64.1%'}}>
+              <div className={tw `mx-6 mt-10 text-white w-auto lg:w-120`}>
                 <ul className={tw `flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch`}>
                   {allPostsData.map(({ id, date, title, description }) => (
                     <li className={tw `cursor-pointer border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300 mx-5`} key={id}>

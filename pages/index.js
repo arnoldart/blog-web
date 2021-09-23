@@ -2,12 +2,44 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Nav from '../Components/Nav'
 import Footer from '../Components/Footer'
-import { tw } from 'twind'
+import { tw, setup } from 'twind'
 import { getSortedPostsData } from '../lib/blog'
 import { MdDateRange } from 'react-icons/md'
+import { motion } from 'framer-motion' 
+import Link from 'next/link'
 
 // Images
 import ProfilePc from '../public/img/profil.png'
+
+setup({
+  theme: {
+    extend: {
+      spacing: {
+        120: "64.1%",
+      }
+    }
+  }
+})
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 export async function getStaticProps() {
   const recentPostBlog = getSortedPostsData()
@@ -35,14 +67,16 @@ export default function Home({ recentPostBlog }) {
       <main className={tw `flex flex-col min-h-screen`}>
         <div className={tw `flex-1`}>
           <div className='container'>
-            <div className={tw `bg-gray-700 rounded-lg mt-7 mx-6`}>
+            <div className={tw `bg-gray-700 rounded-lg mt-7 mx-3`}>
               <div className={tw `flex flex-col lg:flex-row items-center p-6`}>
-                <div>
-                  <Image src={ProfilePc} alt="test" width="512" height="512"/>
-                </div>
+                <Link href="https://github.com/arnoldart">
+                  <a target="_blank">
+                    <Image src={ProfilePc} alt="test" width="512" height="512"/>
+                  </a>
+                </Link>
                 <div className={tw `text-white text-center lg:text-left mt-10 lg:ml-8 lg:mt-0`}>
-                  <p className={tw `font-bold text-3xl lg:text-3xl`}>Halo semua perkenalkan saya Arnold</p>
-                  <p className={tw `mt-3 text-lg text-gray-200`}>Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.Seorang Junior Front End Developer, saya juga membagikan tips tips dan project sekaligus dengan source code nya.</p>
+                  <p className={tw `font-bold text-3xl lg:text-3xl`}>Hello everyone my name is Arnold</p>
+                  <p className={tw `mt-3 text-lg text-gray-200`}>A Junior Front End Developer, I also share tips and projects along with the source code. Btw I simp Raiden EI in Genshin Impact she is so cute</p>
                 </div>
               </div>
             </div>
@@ -51,11 +85,16 @@ export default function Home({ recentPostBlog }) {
               <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>
             </div>
             <div className={tw `flex justify-center items-center`}>
-              <div className={tw `mx-6 mt-10 text-white`} style={{width: '64.1%'}}>
-                <ul className={tw `flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch`}>
+              <div className={tw `mx-6 mt-10 text-white w-auto lg:w-120`}>
+                <motion.ul
+                  className={tw `flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch ${container}`}
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                >
                   {
                     recentsPostsBlog.map(({ id, date, title, description }, index) => (
-                      <li className={tw `cursor-pointer border border-gray-500 w-72 my-2 p-5 rounded-md hover:text-yellow-300 mx-5`} key={id}>
+                      <motion.li className={tw `cursor-pointer border border-gray-500 my-2 p-5 w-72 rounded-md hover:text-yellow-300 mx-5`} key={index} variants={item}>
                         <a href={`/posts/blog/${id}`}>
                           <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
                           <div className={tw `flex items-center`}>
@@ -65,10 +104,10 @@ export default function Home({ recentPostBlog }) {
                           <div className={tw `border-t border-gray-500 my-3`}></div>
                           <p className={tw `text-gray-400`}>{description}</p>
                         </a>
-                      </li>
+                      </motion.li>
                     ))
                   }
-                </ul>
+                </motion.ul>
               </div>
             </div>
           </div>

@@ -13,7 +13,9 @@ export default function Nav() {
       <nav className="container">
         <div className={tw `flex sm:flex-row flex-col justify-between text-white items-center px-6`}>
           <div className={tw `flex items-center justify-between text-white my-3 w-full sm:w-auto z-10`}>
-            <p className={tw `text-2xl font-semibold`}>Arnold</p>
+            <Link href="/">
+              <a className={tw `text-2xl font-semibold`}>Arnold</a>
+            </Link>
             <div onClick={handleClick} className={tw `block text-xl sm:hidden`}>
               {click ? <FaTimes/> : <FaBars/>}
             </div>
