@@ -51,9 +51,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ recentPostBlog }) {
-
-  let recentsPostsBlog = recentPostBlog.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
-
   return (
     <>
       <Head>
@@ -93,14 +90,14 @@ export default function Home({ recentPostBlog }) {
                   animate="visible"
                 >
                   {
-                    recentsPostsBlog.map(({ id, date, title, description }, index) => (
+                    recentPostBlog.slice(0, 3).map(({ id, date, title, description }, index) => (
                       <motion.li className={tw `cursor-pointer border border-gray-500 my-2 p-5 w-72 rounded-md hover:text-yellow-300 mx-5`} key={index} variants={item}>
                         <a href={`/posts/blog/${id}`}>
                           <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
                           <div className={tw `flex items-center`}>
                             <MdDateRange className={tw `text-gray-400`} />
                             <p className={tw `text-xs ml-1 mt-1 text-gray-400`}>{date}</p>
-                          </div>
+                          </div> 
                           <div className={tw `border-t border-gray-500 my-3`}></div>
                           <p className={tw `text-gray-400`}>{description}</p>
                         </a>
