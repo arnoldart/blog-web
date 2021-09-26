@@ -40,7 +40,7 @@ export default function Blog({ allPostsData }) {
       <main className={tw `flex flex-col min-h-screen`}>
         
         <div className={tw `flex-1`}>
-          <div className={tw `container`}>
+          <div className="container">
             <div className={tw `flex flex-col items-center mt-10`}>
               <p className={tw `text-center text-3xl text-white font-semibold `}>All Post</p>
               <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>

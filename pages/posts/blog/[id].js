@@ -18,7 +18,7 @@ export default function Post({postData}) {
       <main className={tw `flex flex-col min-h-screen text-white`}>
         <div className={tw `flex-1`}>
           <div className='container'>
-            <div className={tw `mx-6 mt-10`}>
+            <div className={tw ` mt-10`}>
               <p className={tw `text-center text-3xl font-semibold`}>{postData.title}</p>
               <div className={tw `mt-10`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </div>

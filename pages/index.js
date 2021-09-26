@@ -64,7 +64,7 @@ export default function Home({ recentPostBlog }) {
       <main className={tw `flex flex-col min-h-screen`}>
         <div className={tw `flex-1`}>
           <div className='container'>
-            <div className={tw `bg-gray-700 rounded-lg mt-7 mx-3`}>
+            <div className={tw `bg-gray-700 rounded-lg`}>
               <div className={tw `flex flex-col lg:flex-row items-center p-6`}>
                 <Link href="https://github.com/arnoldart">
                   <a target="_blank">
