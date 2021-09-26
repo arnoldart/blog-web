@@ -74,22 +74,22 @@ export default function Nav() {
           <div className={click ? "navMenu active" : 'navMenu'}>
             <ul className={tw`flex items-center flex-col sm:flex-row h-screen justify-center sm:h-0`}>
               <li className={tw`ml-0 sm:ml-5 mb-5 sm:mb-0 transition duration-150 ease-in hover:text-yellow-300 cursor-pointe`}>
-                <Link activeClassName={tw`text-yellow-300 font-bol`} href="/">
+                <Link activeClassName={tw`text-yellow-300 font-bold`} href="/">
                   <a>Home</a>
                 </Link>
               </li>
               <li className={tw`ml-0 sm:ml-5 mb-5 sm:mb-0 transition duration-150 ease-in hover:text-yellow-300 cursor-pointe`}>
-                <Link activeClassName={tw`text-yellow-300 font-bol`} href="/Project">
+                <Link activeClassName={tw`text-yellow-300 font-bold`} href="/Project">
                   <a>Project</a>
                 </Link>
               </li>
               <li className={tw`ml-0 sm:ml-5 mb-5 sm:mb-0 transition duration-150 ease-in hover:text-yellow-300 cursor-pointe`}>
-                <Link activeClassName={tw`text-yellow-300 font-bol`} href="/Blog">
+                <Link activeClassName={tw`text-yellow-300 font-bold`} href="/Blog">
                   <a>Blog</a>
                 </Link>
               </li>
               <li className={tw`ml-0 sm:ml-5 transition duration-150 ease-in hover:text-yellow-300 cursor-pointe`}>
-                <Link activeClassName={tw`text-yellow-300 font-bol`} href="/About">
+                <Link activeClassName={tw`text-yellow-300 font-bold`} href="/About">
                   <a>About</a>
                 </Link>
               </li>
