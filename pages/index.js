@@ -1,25 +1,13 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import Head from 'next/head'
 import Nav from '../Components/Nav'
 import Footer from '../Components/Footer'
-import { tw, setup } from 'twind'
-import { getSortedPostsData } from '../lib/blog'
+import { motion } from 'framer-motion'
 import { MdDateRange } from 'react-icons/md'
-import { motion } from 'framer-motion' 
-import Link from 'next/link'
-
-// Images
+import { getSortedPostsData } from '../lib/blog'
 import ProfilePc from '../public/img/profil.png'
-
-setup({
-  theme: {
-    extend: {
-      spacing: {
-        120: "64.1%",
-      }
-    }
-  }
-})
+import Styling from '../styles/styling.module.css'
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -61,45 +49,45 @@ export default function Home({ recentPostBlog }) {
 
       <Nav />
 
-      <main className={tw `flex flex-col min-h-screen`}>
-        <div className={tw `flex-1`}>
-          <div className='container'>
-            <div className={tw `bg-gray-700 rounded-lg`}>
-              <div className={tw `flex flex-col lg:flex-row items-center p-6`}>
+      <main className="flex flex-col min-h-screen">
+        <div className="flex-1">
+          <div className={Styling.container}>
+            <div className="bg-gray-700 rounded-lg">
+              <div className="flex flex-col lg:flex-row items-center p-6">
                 <Link href="https://github.com/arnoldart">
                   <a target="_blank">
                     <Image src={ProfilePc} alt="test" width="512" height="512"/>
                   </a>
                 </Link>
-                <div className={tw `text-white text-center lg:text-left mt-10 lg:ml-8 lg:mt-0`}>
-                  <p className={tw `font-bold text-3xl lg:text-3xl`}>Hello everyone my name is Arnold</p>
-                  <p className={tw `mt-3 text-lg text-gray-200`}>A Junior Front End Developer, I also share tips and projects along with the source code. Btw I simp Raiden EI in Genshin Impact she is so cute</p>
+                <div className="text-white text-center lg:text-left mt-10 lg:ml-8 lg:mt-0">
+                  <p className="font-bold text-3xl lg:text-3xl">Hello everyone my name is Arnold</p>
+                  <p className="mt-3 text-lg text-gray-200">A Junior Front End Developer, I also share tips and projects along with the source code. BI simp Raiden EI in Genshin Impact she is so cute</p>
                 </div>
               </div>
             </div>
-            <div className={tw `flex flex-col items-center mt-20`}>
-              <p className={tw `text-center text-3xl text-white font-semibold `}>Recent Posts</p>
-              <div className={tw `border-t-4 border-yellow-300 w-10 mt-1`}></div>
+            <div className="flex flex-col items-center mt-20">
+              <p className="text-center text-3xl text-white font-semibold ">Recent Posts</p>
+              <div className="border-t-4 border-yellow-300 w-10 mt-1"></div>
             </div>
-            <div className={tw `flex justify-center items-center`}>
-              <div className={tw `mx-6 mt-10 text-white w-auto lg:w-120`}>
+            <div className="flex justify-center items-center">
+              <div className="mx-6 mt-10 text-white w-auto lg:w-120">
                 <motion.ul
-                  className={tw `flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch ${container}`}
+                  className="flex justify-center items-center flex-wrap lg:justify-center lg:flex-row lg:items-stretch ${container}"
                   variants={container}
                   initial="hidden"
                   animate="visible"
                 >
                   {
                     recentPostBlog.slice(0, 3).map(({ id, date, title, description }, index) => (
-                      <motion.li className={tw `cursor-pointer border border-gray-500 my-2 p-5 w-72 rounded-md hover:text-yellow-300 mx-5`} key={index} variants={item}>
+                      <motion.li className="cursor-pointer border border-gray-500 my-2 p-5 w-72 rounded-md hover:text-yellow-300 mx-5" key={index} variants={item}>
                         <a href={`/posts/blog/${id}`}>
-                          <p className={tw ` text-lg transition duration-150 ease-in-out`}>{title}</p>
-                          <div className={tw `flex items-center`}>
-                            <MdDateRange className={tw `text-gray-400`} />
-                            <p className={tw `text-xs ml-1 mt-1 text-gray-400`}>{date}</p>
+                          <p className=" text-lg transition duration-150 ease-in-out">{title}</p>
+                          <div className="flex items-center">
+                            <MdDateRange className="text-gray-400" />
+                            <p className="text-xs ml-1 mt-1 text-gray-400">{date}</p>
                           </div> 
-                          <div className={tw `border-t border-gray-500 my-3`}></div>
-                          <p className={tw `text-gray-400`}>{description}</p>
+                          <div className="border-t border-gray-500 my-3"></div>
+                          <p className="text-gray-400">{description}</p>
                         </a>
                       </motion.li>
                     ))
@@ -109,7 +97,7 @@ export default function Home({ recentPostBlog }) {
             </div>
           </div>
         </div>
-        <footer className={tw `mt-10`}>
+        <footer className="mt-10">
           <Footer />
         </footer>
       </main>

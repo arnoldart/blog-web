@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Nav from '../Components/Nav'
-import { tw } from 'twind'
 import Footer from '../Components/Footer'
 
 export default function About() {
@@ -14,13 +13,13 @@ export default function About() {
 
       <Nav />
 
-      <main className={tw `flex flex-col min-h-screen`}>
+      <main className="flex flex-col min-h-screen">
         
-        <div className={tw `flex-1`}>
+        <div className="flex-1">
 
         </div>
 
-        <div className={tw `mt-10`}>
+        <div className="mt-10">
           <Footer />
         </div>
       </main>
