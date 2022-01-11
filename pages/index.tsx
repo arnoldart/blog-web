@@ -26,6 +26,9 @@ const Home: NextPage = () => {
                 <p className={Styles.DevDesc}>A Junior Front End Developer, I also share tips and projects along with the source code. BI simp Raiden EI in Genshin Impact she is so cute</p>
               </div>
             </div>
+            <div className={Styles.CurrentContent}>
+              <p className={Styles.MeddiumTitle}>Current Post</p>
+            </div>
           </div>
         </div>
         <div className="footer">
