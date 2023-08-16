@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Nav from "~/Components/Nav";
 
-const Project: NextPage = () => {
+const Blog: NextPage = () => {
   return (
     <>
       <Nav />
@@ -9,4 +9,4 @@ const Project: NextPage = () => {
   );
 }
 
-export default Project;
+export default Blog;

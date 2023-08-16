@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Nav from "../Components/Nav";
+import Nav from "~/Components/Nav";
 
 const About: NextPage = () => {
   return (

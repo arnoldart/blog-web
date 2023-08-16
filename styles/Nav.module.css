@@ -1,44 +1,19 @@
-.Nav {
+.container {
   display: flex;
+  margin: 5rem;
   justify-content: space-between;
-  align-items: center;
-  margin: 2rem 0 2rem 0;
   color: white;
-}
-
-.hamburger {
-  display: none;
-}
-
-.NavDevMenu {
-  display: flex;
   align-items: center;
 }
 
-.NavDev {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.NavMenuList {
+.navbar_menu {
   display: flex;
 }
 
-.ListMenu {
-  margin: 0 0 0 1rem;
+.navbar_menu > p {
+  padding-left: .5rem;
   cursor: pointer;
-  transition: 150ms all ease-in-out;
-}
-
-.ListMenu:hover {
-  color: rgba(252, 211, 77, 1);	;
-}
-
-.activeLink {
-  color: rgba(252, 211, 77, 1);
-  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 /* 
@@ -92,38 +67,7 @@
 
 @media (min-width: 0px) and (max-width: 480px) {
   
-  .Nav {
-    flex-direction: column;
-  }
   
-  .NavDevMenu {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .ListMenu {
-    margin: 1rem 0 1rem 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .topAndBottomHamburger {
-    width: 1.75rem;
-    height: 0.125rem;
-    background-color: white;
-    border-radius: 0.75rem;
-  }
-
-  .MiddleHamburger {
-    width: 1.75rem;
-    height: 0.125rem;
-    margin: 0.375rem 0 0.375rem 0;
-    background-color:  white;
-    border-radius: 0.75rem;
-  }
 
 
 }
