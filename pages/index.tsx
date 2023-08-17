@@ -7,9 +7,6 @@ import Styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
     <>
-      <head>
-        <title>Home | Arnold Blog</title>
-      </head>
 
       <Nav />
 
