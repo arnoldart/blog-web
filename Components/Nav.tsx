@@ -11,21 +11,21 @@ export default function Nav() {
   const router = useRouter()
 
   return (
-    <main>
+    <main className={Styles.section}>
       <div className={Styles.container}>
         <div>Arnoldart</div>
         <div className={Styles.navbar_menu}>
-          <Link href={"/"}>
-            <p>Home</p>
+          <Link href={"/"} className={`${Styles.navbar_link}`}>
+            <p className={router.pathname == "/" ? Styles.navbar_link_active : ""}>Home</p>
           </Link>
-          <Link href={"/About"}>
-            <p>About Me</p>
+          <Link href={"/About"} className={Styles.navbar_link}>
+            <p className={router.pathname == "/About" ? Styles.navbar_link_active : ""}>About Me</p>
           </Link>
-          <Link href={"/Project"}>
-            <p>Project</p>
+          <Link href={"/Project"} className={Styles.navbar_link}>
+            <p className={router.pathname == "/Project" ? Styles.navbar_link_active : ""}>Project</p>
           </Link>
-          <Link href={"/Blog"}>
-            <p>Blog</p>
+          <Link href={"/Blog"} className={Styles.navbar_link}>
+            <p className={router.pathname == "/Blog" ? Styles.navbar_link_active : ""}>Blog</p>
           </Link>
         </div>
       </div>
