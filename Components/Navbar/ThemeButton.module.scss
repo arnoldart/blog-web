@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+}
+
+.button_theme {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #121524;
+  padding-inline: .5rem;
+  padding-block: .5rem;
+  border-radius: .5rem;
+}
+
+.text_theme {
+  /* font-size: .7rem; */
+}
+
+.list_theme {
+  padding-top: .5rem;
+}

@@ -5,6 +5,7 @@
       "~/Components/*": ["Components/*"],
       "~/lib/*": ["lib/*"],
       "~/styles/*": ["styles/*"],
+      "~/store/*": ["redux/*"]
     },
     "target": "es5",
     "lib": [

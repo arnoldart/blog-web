@@ -1,8 +1,9 @@
-import Styles from '~/styles/Nav.module.css';
+import Styles from '~/Components/Navbar/Nav.module.scss';
 import Link from 'next/link'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/dist/client/router';
+import ThemeButton from './ThemeButton';
 
 export default function Nav() {
   const [click, setClick] = useState(false)
@@ -27,6 +28,7 @@ export default function Nav() {
           <Link href={"/Blog"} className={Styles.navbar_link}>
             <p className={router.pathname == "/Blog" ? Styles.navbar_link_active : ""}>Blog</p>
           </Link>
+          <ThemeButton />
         </div>
       </div>
     </main>
