@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Nav from "~/Components/Navbar/Nav";
 import Styles from '../styles/Home.module.scss'
 import LatestPost from '~/Components/LatestPost/LatestPost';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
   return (
