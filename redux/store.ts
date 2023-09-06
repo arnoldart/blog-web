@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import themeSlices from './slices/ThemeSclices'
 import storage from 'redux-persist/lib/storage'
 import {
@@ -18,6 +18,7 @@ export const store = configureStore({
   reducer: {
     theme: persistedReducer
   },
+  middleware: getDefaultMiddleware()
 })
 
 export const persistor = persistStore(store)
