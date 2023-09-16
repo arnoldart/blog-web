@@ -20,7 +20,7 @@ const LatestPost = () => {
         </div>
         </div>
       </div> */}
-      <div className={Styles.header}>
+      {/* <div className={Styles.header}>
         <p className={Styles.header_title}>Latest Post</p>
       </div>
       <div className={Styles.container}>
@@ -43,7 +43,8 @@ const LatestPost = () => {
             height={300}
           />
         </div>
-      </div>
+      </div> */}
+      
     </div>
   )
 }

@@ -5,15 +5,17 @@ import Nav from "~/Components/Navbar/Nav";
 import Styles from '../styles/Home.module.scss'
 import LatestPost from '~/Components/LatestPost/LatestPost';
 import { useState } from 'react';
+import AboutMe from '~/Components/AboutMe/AboutMe';
 
 const Home: NextPage = () => {
   return (
     <>
 
-      <Nav />
-      <LatestPost /> 
+      {/* <Nav /> */}
+      {/* <LatestPost />  */}
 
       <main className={Styles.section}>
+      <AboutMe />
       
       </main>
     </>
