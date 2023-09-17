@@ -1,16 +1,18 @@
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  src: url(../assets/font/Roboto-Regular.ttf);
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+// @font-face {
+//   font-family: Roboto;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(../assets/font/Roboto-Regular.ttf);
+//   font-display: swap;
+// }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: 'JetBrains Mono', monospace;
   list-style: none;
   text-decoration: none;
 }
