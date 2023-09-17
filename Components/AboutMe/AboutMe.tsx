@@ -2,11 +2,10 @@
 import Styles from './AboutMe.module.scss';
 import gsap from 'gsap'
 import { TextPlugin } from 'gsap/dist/TextPlugin'
-import { useCallback, useLayoutEffect, useRef } from 'react';
+import { useCallback, useLayoutEffect } from 'react';
 import Image from 'next/image';
-import Particles from 'react-particles';
-import { loadSlim } from 'tsparticles-slim';
-import particlesConfig from './particles';
+import ParticleBackground from '../ParticleBackground';
+
 
 const AboutMe = () => {
   useLayoutEffect(() => {
@@ -21,17 +20,9 @@ const AboutMe = () => {
     
   }, [])
 
-  const particlesInit = useCallback(async engine => {
-    await loadSlim(engine)
-  }, [])
-
-  const particlesLoaded = useCallback(async container => {
-    await container
-  }, [])
-
   return (
     <div className={Styles.section}>
-      <Particles id='backgroundParticles' init={particlesInit} loaded={particlesLoaded} options={particlesConfig} />
+      <ParticleBackground/>
       <div className={Styles.container}>
         <div>
           <div id='myProfile' className={Styles.backgroundImage}>
