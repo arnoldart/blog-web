@@ -8,7 +8,7 @@ import Nav from '~/Components/Navbar/Nav';
 
 const Home: NextPage = () => {
   useLayoutEffect(() => {
-    gsap.registerPlugin(TextPlugin)npm
+    gsap.registerPlugin(TextPlugin)
 
     const timeline = gsap.timeline();
     timeline.fromTo("#name", {text: ""}, {text: {value: "Hai, Saya Jedidta Adoni Saputra aka Arnold.", delimiter: ""} ,  duration: 3});
