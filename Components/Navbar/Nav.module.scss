@@ -1,24 +1,42 @@
 .section {
-  background-color: #252B48;
-  padding: 1rem 5rem 5rem 5rem;
+
+  position: relative;
 }
+
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-block: 1.5rem;
+  z-index: 1;
+  position: absolute;
   color: white;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.4px);
+  -webkit-backdrop-filter: blur(2.4px);
+}
+
+.navbar_container {
+  max-width: 93%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+}
+
+.navbar_logo {
+  color: white;
 }
 
 .navbar_menu {
   display: flex;
   gap: 1rem;
-  align-items: center;
+
 }
 
 .navbar_link {
-  font-size: 1rem;
   color: white;
+  display: flex;
   position: relative;
 }
 
@@ -46,6 +64,7 @@
 .navbar_link:hover::before {
   width: 100%;
 }
+
 
 /* 
   ##Device = Laptops, Desktops

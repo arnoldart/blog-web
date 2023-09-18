@@ -35,3 +35,50 @@
   width: 34rem;
   margin-top: 2rem;
 }
+
+/* Dalam file CSS Anda */
+@keyframes gradientForward {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+
+.button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
+  transform: translate(-50%, 0);
+  border: none;
+  appearance: none;
+  padding: .5rem 2rem;
+  border-radius: 10rem;
+  background: rgb(0,179,252);
+  background: linear-gradient(90deg, rgba(0,179,252,1) 0%, rgba(0,255,214,1) 100%);
+  background-size: 200% auto;
+  animation: gradientForward 3s ease-in-out infinite;
+  // transition: all .3s ease-in-out;
+  
+  //   background: rgb(0,229,252);
+  // background: linear-gradient(90deg, rgba(0,229,252,1) 0%, rgba(0,255,214,1) 100%);
+  //   background: rgb(0,221,252);
+  // background: linear-gradient(90deg, rgba(0,221,252,1) 48%, rgba(0,255,214,1) 100%);
+}
+
+.button:hover {
+  background: transparent;
+  border: .1rem solid rgb(0,179,252);
+  transition: all .3s ease-in-out;
+  // position: relative;
+}
+
+.button_link {
+  color: white;
+  font-weight: bold;
+}
