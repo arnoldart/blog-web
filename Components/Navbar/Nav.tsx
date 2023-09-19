@@ -1,18 +1,26 @@
 import Styles from '~/Components/Navbar/Nav.module.scss';
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router';
+import { useState } from 'react';
 
 export default function Nav() {
   const router = useRouter()
+  const [active, setActive] = useState(false)
 
   return (
-    <main className={Styles.section} id='navbar'>
+    <section className={Styles.section} id='navbar'>
       <div className={Styles.container}>
         <div className={Styles.navbar_container}>
           <div className={Styles.navbar_logo}>
             <p>Arnoldart</p>
+            <button
+              onClick={() => setActive(!active)}
+              className={Styles.button_mobile_menu}
+            >
+              ini tombol
+            </button>
           </div>
-          <div className={Styles.navbar_menu}>
+          <div className={`${Styles.navbar_menu} ${ active ? Styles.navbar_menu_active : Styles.navbar_menu_inactive}`}>
             <Link href={"/"} className={`${Styles.navbar_link}`}>
               <p className={router.pathname == "/" ? Styles.navbar_link_active : ""}>Home</p>
             </Link>
@@ -28,6 +36,6 @@ export default function Nav() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   )
 }

@@ -5,6 +5,7 @@ import { useLayoutEffect } from 'react';
 import gsap from 'gsap'
 import { TextPlugin } from 'gsap/dist/TextPlugin'
 import Nav from '~/Components/Navbar/Nav';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   useLayoutEffect(() => {
@@ -22,6 +23,11 @@ const Home: NextPage = () => {
     <>
 
       <main className={Styles.section}>
+        <Head>
+          <title>Home - Arnoldart</title>
+          <meta name="description" content="Home" />
+          <meta name="robots" content="noindex"/>
+        </Head>
         <Nav />
         <AboutMe />
       </main>

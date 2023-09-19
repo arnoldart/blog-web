@@ -32,7 +32,7 @@ const AboutMe = () => {
           <div id='button'>
             <button className={Styles.button}>
               <Link href={"/Project"} className={Styles.button_link}>
-                <p>SEE MY PROJECTS</p>
+                <p className={Styles.button_link_text}>SEE MY PROJECTS</p>
               </Link>
             </button>
           </div>

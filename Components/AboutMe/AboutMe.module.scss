@@ -27,14 +27,17 @@
 
 .myName {
   font-size: .9rem;
-  width: 18rem;
+  width: 100%;
+  max-width: 18rem;
 }
 
 .myDesc {
   font-size: 2rem;
-  width: 34rem;
+  width: 100%;
+  max-width: 34rem;
   margin-top: 2rem;
 }
+
 
 /* Dalam file CSS Anda */
 @keyframes gradientForward {
@@ -81,4 +84,9 @@
 .button_link {
   color: white;
   font-weight: bold;
+}
+
+.button_link_text {
+  max-width: 10rem;
+  width: 100%;
 }
