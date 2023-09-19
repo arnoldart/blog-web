@@ -90,3 +90,9 @@
   max-width: 10rem;
   width: 100%;
 }
+
+@media (min-width: 0px) and (max-width: 480px) { 
+  .myContainer {
+    padding-inline: 1rem;
+  }
+}
