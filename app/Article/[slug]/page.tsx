@@ -4,8 +4,6 @@ import Styles from './Article.module.scss'
 import { MDXProvider } from "@mdx-js/react"
 import { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Heading } from "~/app/Components/Heading/Heading";
-import Restingcom from "~/app/Components/testingcom/testingcom"
 
 type PageProps = {
   params: {
@@ -39,7 +37,6 @@ const Page = async({params}:PageProps) => {
       {/* <MDXProvider components={components}>
         {content}
       </MDXProvider> */}
-      <Restingcom content={content} />
     </section>
   )
 }
