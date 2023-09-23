@@ -10,7 +10,6 @@
     color: white;
     width: 100%;
     &_home {
-      padding-inline: 3rem;
       position: absolute;
     }
   }
@@ -120,7 +119,7 @@
   @media (min-width: 0px) and (max-width: 480px) {
     
     .container {
-  
+      // background-color: red;
     }
   
     .navbar_logo {
@@ -202,19 +201,17 @@
   
     .navbar_menu {
       flex-direction: column;
-      // background-color: red;
       width: 100%;
       position: absolute;
       top: 4rem;
       transition: all .3s ease-in-out;
-      padding-inline: 1.5rem;
       
       &_active {
         left: 0%;
       }
       
       &_inactive {
-        left: -100%;
+        left: -100vw;
         
       }
     }
