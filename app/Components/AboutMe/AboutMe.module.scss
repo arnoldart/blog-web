@@ -16,6 +16,8 @@
   
   .backgroundImage {
     filter: brightness(70%);
+    display: flex;
+    justify-content: center;
   }
   
   .myContainer {

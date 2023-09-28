@@ -32,7 +32,7 @@ const Page = async({params}:PageProps) => {
   return (
     <section className={Styles.section}>
       <Navbar />
-      <article className="mdx-content dark:text-neutral-200 mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap">
+      <article className="prose md:prose-lg lg:prose-xl prose-headings:text-white prose-p:text-white">
         <MDXRemote source={content} />
       </article>
     </section>

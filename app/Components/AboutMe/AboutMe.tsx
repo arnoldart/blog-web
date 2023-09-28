@@ -10,21 +10,21 @@ const AboutMe = () => {
       <ParticleBackground/>
       <div className={Styles.container}>
         <div>
-          {/* <div id='myProfile' className={Styles.backgroundImage}>
+          <div id='myProfile' className={Styles.backgroundImage}>
             <Image 
-              src={'/img/profile.jpeg'} 
+              src={'/img/profil.png'} 
               alt={'test'}    
               priority={true}
               layout='fixed'
-              width={130}
-              height={130}
+              width={99}
+              height={99}
               style={{
                 borderRadius: "100%"
               }}
               draggable={false}
               onContextMenu={(e) => e.preventDefault()}
             />
-          </div> */}
+          </div>
           <div className={Styles.myContainer}>
             <p id='name' className={Styles.myName}></p>
             <p id='desc' className={Styles.myDesc}></p>

@@ -37,4 +37,12 @@ export default withMdx({
   options: {
     providerImportSource: '@mdx-js/react',
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
+
+    return config;
+  }
 })

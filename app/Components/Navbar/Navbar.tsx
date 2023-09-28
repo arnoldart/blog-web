@@ -3,6 +3,7 @@ import Styles from '~/app/Components/Navbar/Navbar.module.scss';
 import Link from 'next/link'
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { AiFillGithub } from 'react-icons/ai'
 
 export default function Nav() {
   const [active, setActive] = useState(false)
@@ -13,7 +14,9 @@ export default function Nav() {
       <div className={`${Styles.container} ${params == '/' && Styles.container_home}`}>
         <div className={Styles.navbar_container}>
           <div className={Styles.navbar_logo}>
-            <p>Arnoldart</p>
+            <Link href={'/'}>
+              <p>Arnoldart</p>
+            </Link>
             <div
               onClick={() => setActive(!active)}
               className={Styles.button_mobile_menu}
@@ -35,6 +38,9 @@ export default function Nav() {
             </Link>
             <Link href={"/About"} className={Styles.navbar_link}>
               <p className={`${params == "/About" && Styles.navbar_link_active}`}>About Me</p>
+            </Link>
+            <Link href={"https://github.com/arnoldart/"} className={Styles.navbar_link}>
+              <AiFillGithub size={25} />
             </Link>
           </div>
         </div>
