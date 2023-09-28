@@ -1,8 +1,6 @@
 import Navbar from "~/app/Components/Navbar/Navbar"
 import { getPostBySlug } from "~/lib/mdx"
 import Styles from './Article.module.scss'
-import { MDXProvider } from "@mdx-js/react"
-import { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 type PageProps = {
@@ -34,9 +32,9 @@ const Page = async({params}:PageProps) => {
   return (
     <section className={Styles.section}>
       <Navbar />
-      {/* <MDXProvider components={components}>
-        {content}
-      </MDXProvider> */}
+      <article className="mdx-content dark:text-neutral-200 mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap">
+        <MDXRemote source={content} />
+      </article>
     </section>
   )
 }

@@ -27,14 +27,14 @@ export default function Nav() {
             <Link href={"/"} className={`${Styles.navbar_link}`}>
               <p className={`${params == "/" && Styles.navbar_link_active}`}>Home</p>
             </Link>
-            <Link href={"/About"} className={Styles.navbar_link}>
-              <p className={`${params == "/About" && Styles.navbar_link_active}`}>About Me</p>
-            </Link>
             <Link href={"/Project"} className={Styles.navbar_link}>
-              <p className={`${params == "/Project" && Styles.navbar_link_active}`}>Project</p>
+              <p className={`${params.split('/')[1] == "Project" || params.split('/')[1] == 'Article' && Styles.navbar_link_active}`}>Project</p>
             </Link>
             <Link href={"/Blog"} className={Styles.navbar_link}>
-              <p className={`${params == "/Blog" && Styles.navbar_link_active}`}>Blog</p>
+              <p className={`${params == "/Blog" || params.split('/')[1] == 'Blog' && Styles.navbar_link_active}`}>Blog</p>
+            </Link>
+            <Link href={"/About"} className={Styles.navbar_link}>
+              <p className={`${params == "/About" && Styles.navbar_link_active}`}>About Me</p>
             </Link>
           </div>
         </div>

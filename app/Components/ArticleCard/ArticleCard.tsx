@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const ArticleCard = async () => {
   const preview = await getAllPostMeta()
+  console.log(preview)
   return (
     <div>
       <div className={Styles.container_card}>

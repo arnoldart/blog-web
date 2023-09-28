@@ -1,28 +1,23 @@
 import fs from 'fs';
 import path from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc'
+import matter from 'gray-matter'
 
 const rootDirectory = path.join(process.cwd(), 'Posts',)
 
 export const getPostBySlug = async (slug: string) => {
-  const realSlug = slug.replace(/\.mdx$/, '')
-  const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
+  const realSlug = slug.replace(/\.md$/, '')
+  // const filePath = path.join(rootDirectory, `${realSlug}.md`)
 
-  const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" })
+  // const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" })
+  const fullPath = path.join(rootDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  const { frontmatter, content } = await compileMDX({
-    source: fileContent,
-    options: {
-      parseFrontmatter: true
-    }
-  })
-
-  // console.log(content)
+  const { data, content } = matter(fileContents)
 
   return {
     meta: {
-      ...frontmatter,
-      slug: realSlug
+      ...data,
+      slug: realSlug,
     },
     content
   }

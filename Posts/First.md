@@ -9,12 +9,12 @@ description: welcome to my first Project
 see image below:
 
 here are some code snipper below:
-```
-expor default function Home() {
-    return (
-        <>
-            <p>Testing</p>
-        </>
-    )
-}
+```ts
+let title: string; // Valid
+let author: String; // Error!
+
+let age: number;
+let old: boolean;
+
+let name: string = "Ronny"; // Valid juga
 ```

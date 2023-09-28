@@ -21,9 +21,11 @@ export default function Home() {
   }, [])
 
   return (
-    <section className={Styles.section}>
+    <section>
+      <div className={Styles.section}>
       <Nav />
-      <AboutMe />
+        <AboutMe />
+      </div>
     </section>
   )
 }
