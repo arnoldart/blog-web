@@ -8,7 +8,7 @@ const Project = async () => {
     <section className={Styles.section}>
       <Nav/>
       <div className={Styles.container}>
-        <p className={Styles.title}>PROJECT POSTS</p>
+        <p className={Styles.title}>BLOG POSTS</p>
         <ArticleCard />
       </div>
     </section>
