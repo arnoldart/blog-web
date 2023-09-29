@@ -1,4 +1,4 @@
-import Nav from '../Components/Navbar/Navbar'
+import Nav from '~/app/Components/Navbar/Navbar'
 import Styles from './About.module.scss'
 
 const About = () => {

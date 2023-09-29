@@ -1,7 +1,7 @@
 // 'use client'
 import Nav from "~/app/Components/Navbar/Navbar";
 import Styles from './page.module.scss'
-import ArticleCard from "../Components/ArticleCard/ArticleCard";
+import ArticleCard from "~/app/Components/ArticleCard/ArticleCard";
 
 const Project = async () => {
   return (
