@@ -20,18 +20,26 @@ const Navbar = () => {
             Project
           </Link>
         </li>
-        <li>Blog</li>
-        <li>AboutMe</li>
+        <li>
+          <Link href="/Blog">
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link href="/AboutMe">
+            About
+          </Link>
+        </li>
       </ul>
       <div className="flex items-center">
         <Button size="icon" variant="ghost">
           <Link target="_blank" href="https://www.linkedin.com/in/jedidta-adoni-saputra/">
-            <LinkedInLogoIcon />
+            <LinkedInLogoIcon className="h-4 w-4" />
           </Link>
         </Button>
         <Button size="icon" variant="ghost">
           <Link target="_blank" href="https://github.com/arnoldart/">
-            <GitHubLogoIcon />
+            <GitHubLogoIcon className="h-4 w-4" />
           </Link>
         </Button>
         <ModeToggle />
