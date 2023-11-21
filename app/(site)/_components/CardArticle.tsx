@@ -16,10 +16,10 @@ const CardArticle = async () => {
     <>
       {preview.map((value:any) => 
         (
-          <Link href={`/Article/${value.slug}`} key={value.slug}>
-            <Card  className="w-[25rem]">
+          <Link href={`/Article/${value.slug}`} key={value.slug} className="sm:w-auto w-full">
+            <Card  className="sm:w-[25rem] w-full">
               <CardHeader>
-                <div className="flex item-center gap-x-3 items-center text-slate-400">
+                <div className="flex item-center gap-x-[.5rem] items-center text-slate-400 text-sm">
                   <CalendarIcon className="h-4 w-4" />
                   <p>{value.date}</p>
                 </div>

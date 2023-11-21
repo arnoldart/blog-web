@@ -1,6 +1,6 @@
 ---
 title: My First Projects
-date: 220 september 2023
+date: 20 september 2023
 description: welcome to my first Project
 ---
 
