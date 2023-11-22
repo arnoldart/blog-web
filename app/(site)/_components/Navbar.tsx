@@ -11,8 +11,8 @@ const Navbar = () => {
   const handleClick = () => setClick(!click)
   return (
     <div>
-      <div className="flex items-center justify-between w-full py-5">
-        <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between py-5">
+        <div className="flex items-center justify-between md:w-auto w-full">
           <p>Arnoldart</p>
           <p onClick={() => handleClick} className="md:hidden block">menu</p>
         </div>
