@@ -13,7 +13,9 @@ const Navbar = () => {
     <div>
       <div className="flex items-center justify-between py-5">
         <div className="flex items-center justify-between md:w-auto w-full">
-          <p>Arnoldart</p>
+          <Link href='/'>
+            <p>Arnoldart</p>
+          </Link>
           <p onClick={() => handleClick} className="md:hidden block">menu</p>
         </div>
         <ul className="md:flex items-center gap-x-3 hidden">
