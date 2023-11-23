@@ -9,24 +9,24 @@ import TextPlugin from 'gsap/TextPlugin'
 import { Button } from '~/components/ui/button'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Footer from './_components/Footer'
+import { useTheme } from 'next-themes'
 
 const Home = () => {
-  const [theme, setTheme] = useState("#0A0A0A")
+  const { resolvedTheme } = useTheme()
+  let theme = resolvedTheme === "dark" ? "#fff" :  "#0A0A0A"
+  
   useEffect(() => {
-    setTheme(window.localStorage.getItem('theme') === "dark" ? "#fff" :  "#0A0A0A")
-  }, [])
-
-  useLayoutEffect(() => {
     gsap.registerPlugin(TextPlugin)
 
     const timeline = gsap.timeline();
-    timeline.fromTo("#name", {text: ""}, {text: {value: "Hai, Saya Jedidta Adoni Saputra aka Arnold.", delimiter: ""} ,  duration: 3});
-    timeline.fromTo("#desc", {text: ""}, {text: "Saya seorang web programmer di bagian Frontend.", duration: 3}, "<.5");
+    timeline.fromTo("#name", {text: "", color: theme}, {color: theme, text: {value: "Hai, Saya Jedidta Adoni Saputra aka Arnold.", delimiter: ""} ,  duration: 3});
+    timeline.fromTo("#desc", {text: "", color: theme}, {color: theme, text: "Saya seorang web programmer di bagian Frontend.", duration: 3}, "<.5");
     timeline.fromTo('#myProfile', {opacity: 0, y: -100}, {opacity: 1, y:0, duration: 1});
     timeline.fromTo('#backgroundParticles', {opacity: 0}, {opacity: 1, duration: 1});
     timeline.fromTo('#button', {opacity: 0}, {opacity: 1, duration: 1}, 5);
     timeline.fromTo('#navbar', {opacity: 0}, {opacity: 1, duration: 1}, 5);
-  }, [])
+    console.log(theme)
+  })
 
 
   return (
