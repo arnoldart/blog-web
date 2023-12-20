@@ -1,17 +1,13 @@
-// 'use client'
-import Nav from "~/app/Components/Navbar/Navbar";
-import Styles from './page.module.scss'
-import ArticleCard from "~/app/Components/ArticleCard/ArticleCard";
+import { getAllPostMeta } from "~/lib/mdx"
+import Link from 'next/link'
+import CardArticle from "../_components/CardArticle"
 
-const Project = async () => {
+const Project = () => {
   return (
-    <section className={Styles.section}>
-      <Nav/>
-      <div className={Styles.container}>
-        <p className={Styles.title}>PROJECT POSTS</p>
-        <ArticleCard />
-      </div>
-    </section>
+    <div className="flex gap-5 flex-wrap justify-center">
+      <CardArticle />
+      <CardArticle />
+    </div>
   )
 }
 

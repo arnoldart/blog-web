@@ -1,7 +1,5 @@
-import Navbar from "~/app/Components/Navbar/Navbar"
-import { getPostBySlug } from "~/lib/mdx"
-import Styles from './Article.module.scss'
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { getPostBySlug } from "~/lib/mdx"
 
 type PageProps = {
   params: {
@@ -27,17 +25,16 @@ export const generateMetadata = async ({params: { slug, title }}:PageProps) => {
   return {title: meta.slug}
 }
 
-const Page = async({params}:PageProps) => {
+
+const Article = async({params}:PageProps) => {
   const { content } = await getPageContent(params.slug)
   return (
-    <section className={Styles.section}>
-      <Navbar />
-      <article className="prose md:prose-lg lg:prose-xl prose-headings:text-white prose-p:text-white">
+    <section>
+      <article className="mdx-content dark:text-neutral-200 mx-auto py-12 max-w-screen-md prose xl:prose-lg prose-ul:break-words prose-code:break-words print:prose-pre:border print:pt-3 print:prose-pre:whitespace-pre-wrap">
         <MDXRemote source={content} />
       </article>
     </section>
   )
 }
 
-export default Page
-  
+export default Article
