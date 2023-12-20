@@ -5,20 +5,24 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import { Button } from "~/components/ui/button"
 import Link from "next/link"
 import { useState } from "react"
+import { useScrollTop } from "~/hooks/use-scroll-top"
+import { cn } from "~/lib/utils"
 
 const Navbar = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(true)
   const handleClick = () => setClick(!click)
+  // const scrolled = useScrollTop()
+
   return (
     <div>
-      <div className="flex items-center justify-between py-5">
-        <div className="flex items-center justify-between md:w-auto w-full">
+      <div className="block md:flex items-center justify-between py-5">
+        <div className="flex items-center justify-between md:w-auto w-full static z-50">
           <Link href='/'>
             <p>Arnoldart</p>
           </Link>
-          <p onClick={() => handleClick} className="md:hidden block">menu</p>
+          <p onClick={handleClick} className="md:hidden block">menu</p>
         </div>
-        <ul className="md:flex items-center gap-x-3 hidden">
+        <ul className={`${click ? 'flex-row' : 'flex-col h-screen justify-center items-center absolute m-auto w-full bg-gray-700 top-0 z-40'} flex items-center gap-x-3`}>
           <li>
             <Link href='/'>
               Home
@@ -53,44 +57,10 @@ const Navbar = () => {
           </Button>
           <ModeToggle />
         </div>
+        {/* <div className={cn("absolute w-full h-screen bg-slate-500 top-0 opacity-0 transition-all ease-out duration-300", click && "opacity-1")}>
+          adasd
+        </div> */}
       </div>
-      {/* <div className="h-screen w-full  justify-center items-center bg-slate-400 flex md:hidden">
-        <ul className="md:hidden items-center gap-y-3 justify-center flex flex-col">
-          <li>
-            <Link href='/'>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href='/Project'>
-              Project
-            </Link>
-          </li>
-          <li>
-            <Link href="/Blog">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link href="/AboutMe">
-              About
-            </Link>
-          </li>
-        </ul>
-        <div className="md:hidden flex items-center justify-center">
-          <Button size="icon" variant="ghost">
-            <Link target="_blank" href="https://www.linkedin.com/in/jedidta-adoni-saputra/">
-              <LinkedInLogoIcon className="h-4 w-4" />
-            </Link>
-          </Button>
-          <Button size="icon" variant="ghost">
-            <Link target="_blank" href="https://github.com/arnoldart/">
-              <GitHubLogoIcon className="h-4 w-4" />
-            </Link>
-          </Button>
-          <ModeToggle />
-        </div>
-      </div> */}
     </div>
   )
 }

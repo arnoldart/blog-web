@@ -25,14 +25,13 @@ const Home = () => {
     timeline.fromTo('#backgroundParticles', {opacity: 0}, {opacity: 1, duration: 1});
     timeline.fromTo('#button', {opacity: 0}, {opacity: 1, duration: 1}, 5);
     timeline.fromTo('#navbar', {opacity: 0}, {opacity: 1, duration: 1}, 5);
-    console.log(theme)
   })
 
 
   return (
     <div>
       <Particle color={theme} />
-      <div className='flex justify-center h-screen items-center text-center text-white relative'>
+      <div className='flex justify-center h-screen items-center text-center text-white'>
         <div>
           <div id='myProfile'  className='justify-center flex'>
             <Image 
