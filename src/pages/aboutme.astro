@@ -1,0 +1,10 @@
+---
+import Navbar from "../components/Navbar/Navbar";
+import Layout from "../layouts/Layout.astro";
+
+const currentPath = Astro.url.pathname
+---
+
+<Layout title="waduh">
+  <Navbar currentPath={currentPath} />
+</Layout>
