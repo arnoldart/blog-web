@@ -11,7 +11,7 @@ export default function Navbar(data: Navbar) {
   const handleClick = () => setOpen(!open);
 
   return (
-    <nav>
+    <nav className="py-6">
       <div className="flex items-center justify-between">
         <p className="text-ctp-text font-bold">ARNOLDART</p>
         <div className="sm:flex hidden gap-3 text-ctp-text font-bold">

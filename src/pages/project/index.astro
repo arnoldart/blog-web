@@ -1,0 +1,22 @@
+---
+import Navbar from "../../components/Navbar/Navbar";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = Object.values(await import.meta.glob('../projects/*.md', { eager: true }));
+const currentPath = Astro.url.pathname
+
+---
+
+<Layout title="waduh">
+  <Navbar currentPath={currentPath} />
+
+  <div class="grid grid-cols-3 gap-5 flex-wrap justify-center">
+    {posts.map((item: any) => (
+      <div class="text-ctp-text border rounded-md px-5 py-5">
+        <p>{item.frontmatter.title}</p>
+        <p>{item.frontmatter.desc}</p>
+      </div>
+    ))}
+  </div>
+
+</Layout>
