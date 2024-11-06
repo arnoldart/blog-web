@@ -1,0 +1,19 @@
+---
+import Navbar from '../components/Navbar/Navbar';
+import Layout from '../layouts/Layout.astro';
+
+const currentPath = Astro.url.pathname
+
+---
+
+<Layout title="Welcome to Astro.">
+	<Navbar currentPath={currentPath} client:load />
+
+	<div class="text-ctp-text">
+		<p>Hi I am Jedidta aka Arnold</p>
+		<p>A Front-End developer</p>
+		<p>from Indonesia</p>
+	</div>
+</Layout>
+
+
