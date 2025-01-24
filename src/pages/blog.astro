@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+
+const posts = await getCollection('blog');
+posts.sort((a:any, b:any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout title="Blog - Your Portfolio">
+  <Navbar client:only="react" />
+  <div class="pt-32 pb-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl font-bold mb-12 text-ctp-mauve">Blog</h1>
+      <div class="space-y-8">
+        {posts.map((post:any) => (
+          <article class="bg-ctp-mantle rounded-lg overflow-hidden border border-ctp-surface0">
+            <div class="md:flex">
+              <div class="md:w-1/3">
+                <img 
+                  src={post.data.image}
+                  alt={post.data.title}
+                  class="h-48 w-full object-cover md:h-full"
+                />
+              </div>
+              <div class="p-6 md:w-2/3">
+                <div class="flex items-center gap-4 text-sm text-ctp-subtext0 mb-2">
+                  <span>{post.data.date}</span>
+                  <span>•</span>
+                  <span>{post.data.readTime}</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-ctp-text hover:text-ctp-mauve transition-colors">
+                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                </h2>
+                <p class="text-ctp-subtext0 mb-4">{post.data.excerpt}</p>
+                <a href={`/blog/${post.slug}`} class="inline-flex items-center text-ctp-mauve hover:text-ctp-pink transition-colors">
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

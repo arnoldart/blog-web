@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import { Code2, Palette, Terminal, Gamepad2 } from 'lucide-react';
+---
+
+<Layout title="Your Name - Portfolio">
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="text-5xl font-bold mb-6 text-ctp-mauve">
+          Hello, I'm <span class="text-ctp-pink">Jedidta Adoni Saputra</span>
+        </h1>
+        <p class="text-xl text-ctp-subtext0 max-w-2xl">
+          A passionate developer focused on creating beautiful and functional web experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-ctp-mantle">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center text-ctp-mauve">What I Do</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-lg bg-ctp-base border border-ctp-surface0">
+            <Code2 className="w-12 h-12 text-ctp-blue mb-4" />
+            <h3 class="text-xl font-bold mb-2">Web Development</h3>
+            <p class="text-ctp-subtext0">Creating responsive and performant web applications.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-ctp-base border border-ctp-surface0">
+						<Gamepad2 className="w-12 h-12 text-ctp-pink mb-4" />
+            <h3 class="text-xl font-bold mb-2">Game Development</h3>
+            <p class="text-ctp-subtext0">Designing beautiful and intuitive user interfaces.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-ctp-base border border-ctp-surface0">
+            <Terminal className="w-12 h-12 text-ctp-green mb-4" />
+            <h3 class="text-xl font-bold mb-2">Backend Development</h3>
+            <p class="text-ctp-subtext0">Building robust and scalable server solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

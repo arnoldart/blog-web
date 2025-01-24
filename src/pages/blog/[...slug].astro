@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, 
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={`${entry.data.title} - Blog`}>
+  <Navbar />
+  <article class="pt-32 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <img 
+        src={entry.data.image}
+        alt={entry.data.title}
+        class="w-full h-64 object-cover rounded-lg mb-8"
+      />
+      <div class="flex items-center gap-4 text-sm text-ctp-subtext0 mb-4">
+        <span>{entry.data.date}</span>
+        <span>•</span>
+        <span>{entry.data.readTime}</span>
+        <span>•</span>
+        <span>By {entry.data.author}</span>
+      </div>
+      <h1 class="text-4xl font-bold mb-8 text-ctp-mauve">{entry.data.title}</h1>
+      <div class="prose prose-invert prose-ctp max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+  <Footer />
+</Layout>
+
+<style is:global>
+  .prose-ctp {
+    --tw-prose-body: theme('colors.ctp.text');
+    --tw-prose-headings: theme('colors.ctp.mauve');
+    --tw-prose-links: theme('colors.ctp.blue');
+    --tw-prose-bold: theme('colors.ctp.text');
+    --tw-prose-code: theme('colors.ctp.pink');
+    --tw-prose-pre-code: theme('colors.ctp.text');
+    --tw-prose-pre-bg: theme('colors.ctp.mantle');
+    --tw-prose-quotes: theme('colors.ctp.subtext0');
+    --tw-prose-quote-borders: theme('colors.ctp.surface0');
+  }
+
+  .prose pre {
+    background-color: theme('colors.ctp.mantle');
+    border: 1px solid theme('colors.ctp.surface0');
+    border-radius: 0.5rem;
+  }
+
+  .prose code {
+    background-color: theme('colors.ctp.surface0');
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+
+  .prose a {
+    text-decoration: none;
+    border-bottom: 1px solid theme('colors.ctp.blue');
+  }
+
+  .prose a:hover {
+    color: theme('colors.ctp.sapphire');
+    border-color: theme('colors.ctp.sapphire');
+  }
+</style>
