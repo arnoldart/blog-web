@@ -5,6 +5,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState<string>("");
 
+  useEffect(() => {
+    console.log(window.location.pathname)
+  }, [])
+
   const handleClick = () => setIsOpen(!isOpen)
 
   return (
@@ -92,21 +96,21 @@ const Navbar = () => {
             <a
               href="/about"
               className="transition-colors text-ctp-text hover:text-ctp-mauve"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClick}
             >
               About
             </a>
             <a
               href="/projects"
               className="transition-colors text-ctp-text hover:text-ctp-mauve"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClick}
             >
               Projects
             </a>
             <a
               href="/blog"
               className="transition-colors text-ctp-text hover:text-ctp-mauve"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClick}
             >
               Blog
             </a>
@@ -141,6 +145,7 @@ const Navbar = () => {
       </nav>
     </header>
   );
+
 };
 
 export default Navbar;

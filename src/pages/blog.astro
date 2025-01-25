@@ -9,7 +9,7 @@ posts.sort((a:any, b:any) => new Date(b.data.date).getTime() - new Date(a.data.d
 ---
 
 <Layout title="Blog - Your Portfolio">
-  <Navbar client:only="react" />
+  <Navbar client:load />
   <div class="pt-32 pb-20 px-6">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-4xl font-bold mb-12 text-ctp-mauve">Blog</h1>
