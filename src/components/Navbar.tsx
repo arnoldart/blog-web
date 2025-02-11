@@ -11,9 +11,11 @@ const Navbar = () => {
 
   const handleClick = () => setIsOpen(!isOpen)
 
+  console.log(isOpen)
+
   return (
     <header className="fixed w-full bg-ctp-mantle/50 backdrop-blur-sm border-b border-ctp-surface0 z-50">
-      <nav className="max-w-5xl mx-auto px-6 py-4">
+      <nav className={isOpen ? "h-screen max-w-5xl mx-auto px-6 py-4" : "max-w-5xl mx-auto px-6 py-4"}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="text-ctp-mauve font-bold">
@@ -95,22 +97,26 @@ const Navbar = () => {
           <div className="flex flex-col mt-4 md:hidden gap-4 bg-ctp-mantle p-4 rounded-lg shadow-md">
             <a
               href="/about"
-              className="transition-colors text-ctp-text hover:text-ctp-mauve"
-              onClick={handleClick}
+              className={`${
+                currentPath === "/about" && "after:scale-x-100 text-ctp-green"
+              } cursor-pointer relative w-fit block after:block after:content-[''] text-ctp-text hover:text-ctp-green after:absolute after:h-[3px] after:bg-ctp-green after:w-full after:scale-x-0 after:scale-x-100 after:transition after:duration-300 after:origin-left`}
             >
               About
             </a>
             <a
               href="/projects"
-              className="transition-colors text-ctp-text hover:text-ctp-mauve"
+              className={`transition-colors text-ctp-pink cursor-pointer relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-ctp-pink after:w-full after:scale-x-0 after:scale-x-100 after:transition after:duration-300 after:origin-left ${
+                currentPath === "/projects" && "text-ctp-pink after:scale-x-100"
+              }`}
               onClick={handleClick}
             >
               Projects
             </a>
             <a
               href="/blog"
-              className="transition-colors text-ctp-text hover:text-ctp-mauve"
-              onClick={handleClick}
+              className={`${
+                currentPath === "/blog" && "after:scale-x-100"
+              } cursor-pointer relative w-fit block after:block after:content-[''] text-ctp-text hover:text-ctp-yellow after:absolute after:h-[3px] after:bg-ctp-yellow after:w-full after:scale-x-0 after:scale-x-100 after:transition after:duration-300 after:origin-left`}
             >
               Blog
             </a>
